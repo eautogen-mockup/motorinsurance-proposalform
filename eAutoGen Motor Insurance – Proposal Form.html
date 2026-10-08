@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>eAutoGen Motor Insurance – Proposal Form</title>
+<style>
+:root{--bg:#ffffff;--card:#fff;--ink:#14243a;--mute:#5b6b80;--line:#d6dee8;--brand:#0b4d8a;--brand-ink:#fff;--accent:#14b8b8;--req:#d62839;--field:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 "Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif}
+header{background:#fff;border-bottom:4px solid var(--accent);padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+header img{height:48px;display:block}
+header small{color:#5b6b80;font-weight:600}
+input[type=checkbox],input[type=radio]{accent-color:var(--accent)}
+main{max-width:960px;margin:24px auto;padding:0 16px}
+h1{font-size:24px;margin:0 0 4px;color:var(--brand)}
+.sub{color:var(--mute);margin:0 0 18px}
+fieldset{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:0 0 18px;padding:18px 20px 12px}
+legend{font-weight:700;font-size:16px;padding:0 10px;margin-left:-10px;color:var(--brand);border-left:4px solid var(--accent)}
+h3{font-size:14px;margin:6px 0 10px;color:#0e8f8f}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 22px;margin-bottom:8px}
+.full{grid-column:1/-1}
+label{display:block;font-size:13px;font-weight:600;margin-bottom:4px}
+.r::after{content:" *";color:var(--req)}
+input:not([type=radio]):not([type=checkbox]),select{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:6px;background:var(--field);color:var(--ink);font:inherit}
+input:focus,select:focus{outline:2px solid var(--brand);outline-offset:1px;border-color:var(--brand)}
+.radios{display:flex;gap:18px;flex-wrap:wrap;padding:6px 0}
+.radios label,.chk label{display:flex;align-items:center;gap:8px;font-weight:500;margin:0}
+.chk{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 22px}
+.chk>div{border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.chk .si{display:none;margin-top:8px;align-items:center;gap:8px;font-size:13px}
+.chk .si.on{display:flex}.chk .si input{max-width:160px}
+.hint{font-size:12px;color:var(--mute);margin-top:3px}
+.err{border-color:var(--req)!important}
+.driver{border:1px dashed var(--line);border-radius:8px;padding:12px;margin-bottom:12px}
+#drivers{display:none}#drivers.on{display:block}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:8px 0 40px}
+.note{color:var(--req);font-size:13px}
+button{background:var(--brand);color:var(--brand-ink);border:0;border-radius:8px;padding:11px 28px;font:inherit;font-weight:700;cursor:pointer}
+button:hover{filter:brightness(1.1)}
+#msg{display:none;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:14px 16px;margin-bottom:40px}
+footer{text-align:center;color:var(--mute);font-size:12px;padding:0 0 28px}
+@media(max-width:640px){.grid,.chk{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><img src="data:image/png;base64,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" alt="eAutoGen Capital"><small>Motor Insurance</small></header>
+<main>
+<h1>Motor insurance proposal form</h1>
+<p class="sub">Fill in the proposer and vehicle details. Fields marked * are required.</p>
+
+<form id="f" novalidate>
+<fieldset><legend>a) Details of proposer</legend>
+<div class="grid">
+<div><label class="r" for="name">Name</label><input id="name" required placeholder="As per NRIC / passport"></div>
+<div><label class="r" for="ic">NRIC / Passport / Business / Company Reg. No.</label><input id="ic" required></div>
+<div><label class="r" for="dob">Date of birth</label><input type="date" id="dob" required></div>
+<div><label class="r">Nationality</label>
+<div class="radios"><label><input type="radio" name="nat" value="Malaysian" checked> Malaysian</label><label><input type="radio" name="nat" value="Non-Malaysian"> Non-Malaysian</label></div>
+<input id="country" placeholder="Country (for non-Malaysian)" style="display:none"></div>
+<div><label class="r" for="marital">Marital status</label><select id="marital" required><option value="">-- Please select --</option><option>Single</option><option>Married</option><option>Others</option></select></div>
+<div><label class="r" for="gender">Gender</label><select id="gender" required><option value="">-- Please select --</option><option>Male</option><option>Female</option><option>Others</option></select></div>
+<div class="full"><label class="r" for="addr">Address</label><input id="addr" required placeholder="Street address"></div>
+<div><label class="r" for="post">Postcode</label><input id="post" required inputmode="numeric" maxlength="5"></div>
+<div><label for="occ">Occupation</label><input id="occ"></div>
+<div><label for="house">House phone no.</label><input id="house" type="tel"></div>
+<div><label class="r" for="mobile">Mobile phone no.</label><input id="mobile" type="tel" required placeholder="e.g. 012-3456789"></div>
+<div class="full"><label class="r" for="email">Email address</label><input id="email" type="email" required></div>
+</div></fieldset>
+
+<fieldset><legend>b) Vehicle details</legend>
+<div class="grid">
+<div><label class="r" for="vno">Vehicle no.</label><input id="vno" required placeholder="e.g. WXY1234" style="text-transform:uppercase"></div>
+<div><label class="r" for="use">Use of vehicle</label><select id="use" required><option>Private</option><option>Commercial</option><option>Motorcycle</option><option>Special Types</option><option>Others</option></select></div>
+<div><label class="r" for="model">Car make &amp; model</label><input id="model" required placeholder="e.g. Perodua Myvi 1.5"></div>
+<div><label for="body">Body</label><input id="body" placeholder="e.g. Hatchback"></div>
+<div><label class="r" for="fuel">Fuel type</label><select id="fuel" required><option>Petrol</option><option>Diesel</option><option>Electric</option></select></div>
+<div><label class="r" for="type">Type of insurance</label><select id="type" required><option>Comprehensive</option><option>Third Party Fire &amp; Theft</option><option>Third Party</option></select></div>
+<div><label class="r" for="from">Insurance period (from)</label><input type="date" id="from" required></div>
+<div><label class="r" for="to">Insurance period (to)</label><input type="date" id="to" required><div class="hint">Auto-set to 12 months.</div></div>
+<div><label for="hp">Name of hire purchase company (if any)</label><input id="hp"></div>
+<div><label for="rt">Road tax duration</label><select id="rt"><option value="">-- Please select --</option><option>6 months</option><option>12 months</option></select></div>
+<div class="full"><label for="reg">Registration card <span style="font-weight:400;color:var(--mute)">(please attach a copy)</span></label><input type="file" id="reg" accept="image/*,.pdf"></div>
+</div>
+
+<h3>Additional benefits (subject to additional premium)</h3>
+<div class="chk">
+<div><label><input type="checkbox"> Passenger Liability Cover</label></div>
+<div><label><input type="checkbox"> Special Perils</label></div>
+<div><label><input type="checkbox"> Legal Liability of Passengers for Act of Negligence</label></div>
+<div><label><input type="checkbox"> Betterment Buyback</label></div>
+<div><label><input type="checkbox" data-si="si1"> Windscreen Cover</label><div class="si" id="si1">Sum insured RM <input type="number" min="0"></div></div>
+<div><label><input type="checkbox"> All Drivers</label></div>
+<div><label><input type="checkbox"> Strike, Riot and Civil Commotion</label></div>
+<div><label><input type="checkbox" id="named"> Named Drivers</label></div>
+<div><label><input type="checkbox" data-si="si2"> Radio / Cassette / CD Player</label><div class="si" id="si2">Sum insured RM <input type="number" min="0"></div></div>
+<div><label><input type="checkbox" data-si="si3"> Others</label><div class="si" id="si3"><input type="text" placeholder="Please specify"></div></div>
+</div>
+
+<div id="drivers"><h3 style="margin-top:18px">Named driver details</h3>
+<div class="driver"><div class="grid"><div><label>Name</label><input></div><div><label>NRIC / Passport / Business / Company Reg. No.</label><input></div><div><label>Occupation</label><input></div><div><label>Relationship</label><input></div></div></div>
+<div class="driver"><div class="grid"><div><label>Name</label><input></div><div><label>NRIC / Passport / Business / Company Reg. No.</label><input></div><div><label>Occupation</label><input></div><div><label>Relationship</label><input></div></div></div>
+</div>
+
+<h3 style="margin-top:18px">NCD info</h3>
+<div class="grid">
+<div><label>NCD entitlement</label><div class="radios"><label><input type="radio" name="ncd" value="Yes"> Yes</label><label><input type="radio" name="ncd" value="No" checked> No</label></div>
+<input id="ncdpct" type="number" min="0" max="55" placeholder="NCD %" style="display:none"></div>
+<div><label for="ncdveh">Vehicle no. from which the NCD is transferred</label><input id="ncdveh"></div>
+<div class="full"><label for="ncdins">Name of insurer</label><input id="ncdins"></div>
+</div>
+</fieldset>
+
+<div class="bar"><span class="note">* Mandatory field</span><button type="submit">Submit</button></div>
+<div id="msg" role="status"></div>
+</form>
+</main>
+<footer>© eAutoGen Capital Sdn Bhd. All rights reserved.</footer>
+<script>
+const $=id=>document.getElementById(id);
+const addYear=v=>{if(!v)return"";const d=new Date(v);d.setFullYear(d.getFullYear()+1);d.setDate(d.getDate()-1);return d.toISOString().slice(0,10)};
+const today=new Date().toISOString().slice(0,10);
+$("from").value=today;$("to").value=addYear(today);
+$("from").addEventListener("change",e=>{$("to").value=addYear(e.target.value)});
+document.querySelectorAll("[name=nat]").forEach(r=>r.addEventListener("change",()=>{const nm=document.querySelector("[name=nat]:checked").value!=="Malaysian";$("country").style.display=nm?"block":"none";$("country").style.marginTop="8px"}));
+document.querySelectorAll("[name=ncd]").forEach(r=>r.addEventListener("change",()=>{$("ncdpct").style.display=document.querySelector("[name=ncd]:checked").value==="Yes"?"block":"none";$("ncdpct").style.marginTop="8px"}));
+document.querySelectorAll("[data-si]").forEach(c=>c.addEventListener("change",()=>$(c.dataset.si).classList.toggle("on",c.checked)));
+$("named").addEventListener("change",e=>$("drivers").classList.toggle("on",e.target.checked));
+$("f").addEventListener("submit",e=>{e.preventDefault();let bad=null;
+ document.querySelectorAll("[required]").forEach(el=>{const ok=el.value.trim()!=="";el.classList.toggle("err",!ok);if(!ok&&!bad)bad=el});
+ const m=$("msg");m.style.display="block";
+ if(bad){bad.focus();m.textContent="Please complete the highlighted required fields.";return}
+ m.textContent="Thank you. Your proposal has been received and we will be in touch shortly.";
+});
+</script>
+</body>
+</html>
